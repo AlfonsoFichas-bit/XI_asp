@@ -1,4 +1,4 @@
-import { Component, signal, ViewChild, ElementRef } from '@angular/core';
+import { Component, signal, ViewChild, ElementRef, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import html2canvas from 'html2canvas';
@@ -10,29 +10,43 @@ import html2canvas from 'html2canvas';
   templateUrl: './official-panel.component.html',
 })
 export class OfficialPanelComponent {
-  name = signal('Carlos');
+  name = signal('CARLOS');
   @ViewChild('posterCard') posterCard!: ElementRef<HTMLDivElement>;
+
+  // Calculate font size based on name length to avoid overflow
+  getFontSize() {
+    const length = this.name().length;
+    if (length < 6) return 80;
+    if (length < 10) return 60;
+    if (length < 15) return 45;
+    return 35;
+  }
 
   updateName(event: Event) {
     const input = event.target as HTMLInputElement;
-    this.name.set(input.value);
+    // Enforce uppercase
+    this.name.set(input.value.toUpperCase());
   }
 
   downloadCard() {
     if (!this.posterCard) return;
 
-    html2canvas(this.posterCard.nativeElement, {
-        scale: 2, // Higher resolution
-        useCORS: true, // For loading external images if any (though base.webp is local)
-        backgroundColor: null,
-    }).then(canvas => {
-        const link = document.createElement('a');
-        link.download = `xavier-poster-${this.name()}.png`;
-        link.href = canvas.toDataURL('image/png');
-        link.click();
-    }).catch(err => {
-        console.error('Download failed', err);
-        alert('Error al generar la imagen. Por favor intenta de nuevo.');
-    });
+    // Use a slight timeout to ensure any rendering updates are finished
+    setTimeout(() => {
+        html2canvas(this.posterCard.nativeElement, {
+            scale: 2, // Higher resolution for print quality
+            useCORS: true,
+            backgroundColor: null,
+            logging: false,
+        }).then(canvas => {
+            const link = document.createElement('a');
+            link.download = `VOTA-POR-XAVIER-${this.name()}.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }).catch(err => {
+            console.error('Download failed', err);
+            alert('Error al generar la imagen. Por favor intenta de nuevo.');
+        });
+    }, 100);
   }
 }
