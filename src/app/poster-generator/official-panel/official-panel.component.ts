@@ -38,12 +38,12 @@ export class OfficialPanelComponent {
             useCORS: true,
             backgroundColor: null,
             logging: false,
-        }).then(canvas => {
+        }).then((canvas: HTMLCanvasElement) => {
             const link = document.createElement('a');
             link.download = `VOTA-POR-XAVIER-${this.name()}.png`;
             link.href = canvas.toDataURL('image/png');
             link.click();
-        }).catch(err => {
+        }).catch((err: unknown) => {
             console.error('Download failed', err);
             alert('Error al generar la imagen. Por favor intenta de nuevo.');
         });
