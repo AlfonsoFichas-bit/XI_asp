@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Xavier 2026 - Generador de Carteles</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#005C28", // Verde Campaña
+                        accent: "#FADD00", // Amarillo Campaña
+                        darkText: "#111111", // Negro Intenso
+                        "background-light": "#F3F4F6", // Light gray background
+                        "background-dark": "#1F2937", // Dark mode background
+                    },
+                    fontFamily: {
+                        display: ["Anton", "sans-serif"],
+                        body: ["Roboto", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>.poster-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .ios-notch-padding {
+            padding-top: env(safe-area-inset-top);
+        }
+        .ios-bottom-padding {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-body antialiased flex flex-col h-screen overflow-hidden">
+<header class="bg-primary pt-12 pb-4 px-4 shadow-md flex justify-between items-center z-20">
+<button class="text-white p-1 hover:bg-white/10 rounded-full transition-colors">
+<span class="material-icons">arrow_back</span>
+</button>
+<div class="flex flex-col items-center">
+<div class="flex items-center space-x-2">
+<svg class="w-8 h-8 text-white fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
+</svg>
+<div class="flex flex-col leading-none">
+<span class="font-display text-white text-lg tracking-wide uppercase">Xavier</span>
+<span class="text-xs text-white/90 italic">¡Con visión y coraje!</span>
+</div>
+</div>
+</div>
+<button class="text-white p-1 hover:bg-white/10 rounded-full transition-colors">
+<span class="material-icons">share</span>
+</button>
+</header>
+<main class="flex-grow flex items-center justify-center p-6 relative overflow-y-auto bg-gray-100 dark:bg-gray-800 transition-colors duration-300">
+<div class="relative w-full max-w-sm aspect-[3/4] bg-white dark:bg-gray-700 rounded-lg poster-shadow transform transition-transform duration-300 hover:scale-[1.01] overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-yellow-300 via-yellow-400 to-green-600 opacity-90"></div>
+<div class="absolute top-0 right-0 w-full h-1/2 bg-primary rounded-bl-[100px] transform -translate-y-12 translate-x-12 opacity-80 mix-blend-multiply"></div>
+<div class="absolute inset-0 flex flex-col justify-between p-4 z-10">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 border-2 border-black rounded-full flex items-center justify-center">
+<span class="material-icons text-3xl text-black">check</span>
+</div>
+<div class="text-right text-white">
+<h3 class="font-display text-xl leading-none">Xavier<br/>Iturralde</h3>
+</div>
+</div>
+<div class="mt-8">
+<h1 class="font-display text-4xl text-black uppercase leading-none tracking-tighter mb-1">VOTA POR XAVIER</h1>
+<p class="font-display text-sm text-primary uppercase tracking-wide">Es momento de cambiar nuestra ciudad</p>
+</div>
+<div class="absolute bottom-0 right-0 w-2/3 h-2/3 overflow-hidden">
+<img alt="Candidato Xavier señalando hacia adelante" class="object-cover w-full h-full object-top mask-image-gradient" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3-B3TVX3F9LtRVkSMSPEKyXqg7kvUjn4JFTmNuB7KtN2y0GBFOz_HPSbcyWODDH3ffWVrIjuQXqnBt3OPi9vKuXQ01umfd5FEcL4hQvXBUgBe_UIDiWz54jQaONH_s9wfmstw58MtLCL1CHxDYldPQIIBB94garb-Na1h68YT9i_Ex9E7k9D4eUiPO2txExcsW1VPDbPmNODoXmNLykUVgqnEHDfk5AxBjrNrcPIcIUmh8Rjow1TIdO-DHNl1QCyjAFY71dSPdRE"/>
+</div>
+<div class="mt-auto relative z-20">
+<h2 class="font-display text-2xl text-white drop-shadow-md uppercase leading-none mb-1">¡Rumbo a la<br/>Alcaldía!</h2>
+<p class="text-xs text-white drop-shadow font-medium">Tú y yo transformaremos La Paz.</p>
+<div class="mt-8 border-t border-white/50 pt-2">
+<p class="font-display text-lg text-white text-right leading-none shadow-black drop-shadow-lg">
+                            XAVIER ITURRALDE<br/>
+<span class="text-yellow-300">ALCALDE 2026-2031</span>
+</p>
+</div>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-32 bg-[url('https://images.unsplash.com/photo-1598460677840-34909476b77c?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80')] bg-cover bg-bottom opacity-60 mix-blend-overlay z-0"></div>
+</div>
+</main>
+<div class="bg-accent dark:bg-yellow-600 rounded-t-[2rem] shadow-[0_-5px_20px_rgba(0,0,0,0.15)] z-30 flex flex-col transition-colors duration-300">
+<div class="w-12 h-1.5 bg-black/10 rounded-full mx-auto mt-3 mb-4"></div>
+<div class="px-8 pb-8 pt-2 flex flex-col h-full ios-bottom-padding">
+<div class="mb-6">
+<label class="block text-darkText dark:text-black font-display text-xl uppercase tracking-wide mb-2" for="nameInput">
+                    ¿Cómo te llamas?
+                </label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-icons text-gray-400">person</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-4 text-lg font-bold text-gray-900 bg-white rounded-xl border-0 ring-1 ring-gray-200 focus:ring-4 focus:ring-primary/50 focus:border-primary placeholder-gray-400 shadow-sm transition-shadow duration-200" id="nameInput" placeholder="Escribe tu nombre aquí" type="text" value="Carlos"/>
+</div>
+<p class="text-xs text-darkText/60 dark:text-black/60 mt-2 ml-1 font-medium">
+                    Esto personalizará tu tarjeta digital de apoyo.
+                </p>
+</div>
+<button class="w-full bg-darkText hover:bg-black text-white font-display text-xl tracking-wider py-5 rounded-xl shadow-lg transform active:scale-[0.98] transition-all flex justify-center items-center group mt-auto mb-4">
+                DESCARGAR TARJETA
+                <span class="material-icons ml-2 group-hover:translate-x-1 transition-transform">download</span>
+</button>
+</div>
+</div>
+
+</body></html>

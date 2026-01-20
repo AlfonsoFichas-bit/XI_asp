@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Xavier 2026 - Editor en Vivo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#000000",campaign: "#FADD00","background-light": "#FADD00",
+                        "background-dark": "#1a1a1a",},
+                    fontFamily: {
+                        display: ["Anton", "sans-serif"],
+                        body: ["Roboto", "sans-serif"],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                },
+            },
+        };
+    </script>
+<style>::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }body {
+            background-color: #FADD00;
+        }
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #1a1a1a;
+            }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-campaign dark:bg-background-dark min-h-screen flex flex-col font-body antialiased transition-colors duration-300">
+<header class="flex justify-between items-center p-6 relative z-10">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-black/10 dark:bg-white/10 text-black dark:text-white backdrop-blur-sm">
+<span class="material-icons">arrow_back</span>
+</button>
+<div class="flex flex-col items-center">
+<span class="font-display uppercase tracking-wider text-xl text-black dark:text-yellow-400">Xavier 2026</span>
+<span class="text-xs uppercase font-bold tracking-widest opacity-60 text-black dark:text-gray-300">Editor Oficial</span>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-black/10 dark:bg-white/10 text-black dark:text-white backdrop-blur-sm">
+<span class="material-icons">more_vert</span>
+</button>
+</header>
+<main class="flex-1 flex flex-col items-center justify-start px-6 pb-8 pt-2">
+<div class="w-full max-w-sm relative aspect-[4/5] rounded-xl overflow-hidden shadow-2xl ring-4 ring-black/5 dark:ring-white/10 transform transition-transform hover:scale-[1.02] duration-500 bg-white dark:bg-gray-800">
+<img alt="Candidato Xavier Iturralde señalando al frente" class="absolute inset-0 w-full h-full object-cover object-top opacity-90 mix-blend-multiply dark:mix-blend-normal dark:opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2HMceH14sPbRX89la-E61799_ELkuFgokHTeTCJLl4g_JfEHns2usKoz_UvmuaWj_qhQkYQz1I5Ng_6QvenW4MpEC2c_43FJ0DqcjAbLurEFQEoEqUaZIbfdFPBLyEixP9YjmKiV0Nfr-eQ1sr38FpDPkHTd_u6ISWiqNuM62Y3M0yJaRag87jCuwpAOEa4g64xRRkoW_mDXidpsIrIeo4kEhMTbKlEoOxbPAyOB7kdieJcJBd8axPsX9tL__haRyXqDNR-ATb2M"/>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-campaign/90 dark:to-background-dark/90"></div>
+<div class="absolute inset-0 flex flex-col justify-between p-6">
+<div class="self-end">
+<div class="w-12 h-12 bg-black text-campaign rounded-full flex items-center justify-center shadow-lg">
+<span class="material-icons">verified</span>
+</div>
+</div>
+<div class="mt-auto mb-16">
+<h2 class="font-display text-5xl leading-none text-black dark:text-white uppercase drop-shadow-md tracking-tight">
+                        VOTA POR<br/>XAVIER
+                    </h2>
+<p class="font-bold text-sm bg-black text-white inline-block px-2 py-1 mt-2 uppercase tracking-wider">
+                        Es momento de cambiar
+                    </p>
+</div>
+</div>
+<img alt="Paisaje de La Paz con montañas nevadas" class="absolute bottom-0 left-0 w-full h-1/4 object-cover z-0 mix-blend-multiply dark:mix-blend-luminosity opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhVZup_2RrZSeN4wAPysDHxvPC_3WTsePGfA01HDFi2Sq3Znp5mX4v-om8u5BGC6HGqUajMqJgbGyCqUsBcIYZ-1LSrx2LXm4JiQfRijFB0n1PJ99nmwJweHx5Vs2f_YXKIQ3ZXOATuyMjX7wAYQDfF7kPZ5owh8p8jLOnR5pCTpn7kKzwwlTzrDQcR-ktMaasSoGndALBfbehh8clTr1iTDKBLzVnrHSr-ysdD6ERqKvD5sYKysRuCGMLHaCNKKPVsmuiTmZqkWU"/>
+</div>
+<div class="w-full max-w-sm mt-8 space-y-8">
+<div class="relative group">
+<label class="block text-xs font-bold uppercase tracking-widest text-black/60 dark:text-white/60 mb-2" for="campaign-text">
+                    Tu Mensaje de Campaña
+                </label>
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b-4 border-black dark:border-white text-black dark:text-white font-display text-4xl placeholder-black/30 dark:placeholder-white/30 focus:ring-0 focus:border-black dark:focus:border-yellow-400 px-0 py-2 transition-colors duration-300 uppercase tracking-tight" id="campaign-text" placeholder="ESCRIBE AQUÍ..." type="text" value="RUMBO A LA ALCALDÍA"/>
+<span class="material-icons absolute right-0 top-1/2 -translate-y-1/2 text-black dark:text-white animate-pulse">
+                        edit
+                    </span>
+</div>
+<p class="mt-2 text-xs font-medium text-black/50 dark:text-white/40 text-right">
+                    Caracteres: 19/40
+                </p>
+</div>
+<button class="w-full bg-black dark:bg-white text-white dark:text-black font-bold py-5 px-8 text-lg uppercase tracking-wider shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3 animate-fade-in-up opacity-0" style="animation-delay: 0.3s; animation-fill-mode: forwards;">
+<span>¡Listo! Guardar Imagen</span>
+<span class="material-icons text-xl">save_alt</span>
+</button>
+<div class="flex justify-center gap-6 pt-2">
+<button class="flex flex-col items-center gap-1 text-black dark:text-white hover:opacity-70 transition-opacity">
+<div class="w-10 h-10 border-2 border-black dark:border-white rounded-full flex items-center justify-center">
+<span class="material-icons text-lg">share</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest">Compartir</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-black dark:text-white hover:opacity-70 transition-opacity">
+<div class="w-10 h-10 border-2 border-black dark:border-white rounded-full flex items-center justify-center">
+<span class="material-icons text-lg">refresh</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest">Reiniciar</span>
+</button>
+</div>
+</div>
+</main>
+<footer class="p-6 text-center">
+<p class="text-[10px] uppercase font-bold tracking-[0.2em] text-black/40 dark:text-white/30">
+            Xavier Iturralde • Alcalde 2026-2031
+        </p>
+</footer>
+<script>
+        const input = document.getElementById('campaign-text');
+        // Simple visual feedback when focusing
+        input.addEventListener('focus', () => {
+            input.parentElement.classList.add('scale-[1.02]');
+        });
+        input.addEventListener('blur', () => {
+            input.parentElement.classList.remove('scale-[1.02]');
+        });
+    </script>
+
+</body></html>
