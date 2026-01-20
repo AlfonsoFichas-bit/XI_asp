@@ -1,0 +1,76 @@
+
+> xi-asp@0.0.0 start
+> ng serve
+
+❯ Building...
+✔ Building...
+Initial chunk files | Names                   | Raw size
+styles.css          | styles                  | 51.13 kB |
+main.js             | main                    |  4.61 kB |
+
+                    | Initial total           | 55.73 kB
+
+Lazy chunk files    | Names                   | Raw size
+chunk-BQD52QQE.js   | poster-generator-routes | 36.41 kB |
+
+Application bundle generation complete. [5.420 seconds] - 2026-01-20T05:11:16.858Z
+
+Watch mode enabled. Watching for file changes...
+NOTE: Raw file sizes do not reflect development server per-request transformations.
+  ➜  Local:   http://localhost:4200/
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names                   | Raw size
+styles.css          | styles                  | 51.13 kB |
+main.js             | main                    |  4.61 kB |
+
+                    | Initial total           | 55.73 kB
+
+Lazy chunk files    | Names                   | Raw size
+chunk-BQD52QQE.js   | poster-generator-routes | 36.41 kB |
+
+Application bundle generation complete. [0.099 seconds] - 2026-01-20T05:13:36.208Z
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names | Raw size
+main.js             | main  |  4.53 kB |
+
+Application bundle generation complete. [0.389 seconds] - 2026-01-20T05:15:16.662Z
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names                   | Raw size
+styles.css          | styles                  | 51.13 kB |
+main.js             | main                    |  4.53 kB |
+
+                    | Initial total           | 55.65 kB
+
+Lazy chunk files    | Names                   | Raw size
+chunk-BQD52QQE.js   | poster-generator-routes | 36.41 kB |
+
+Application bundle generation complete. [0.082 seconds] - 2026-01-20T05:15:21.886Z
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names                   | Raw size
+main.js             | main                    |  4.53 kB |
+
+Lazy chunk files    | Names                   | Raw size
+chunk-YLGPNGIQ.js   | poster-generator-routes | 36.64 kB |
+
+Application bundle generation complete. [0.342 seconds] - 2026-01-20T05:15:41.356Z
+
+Component update sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names                   | Raw size
+main.js             | main                    |  4.53 kB |
+
+Lazy chunk files    | Names                   | Raw size
+chunk-TRDLKQOJ.js   | poster-generator-routes | 37.56 kB |
+
+Application bundle generation complete. [0.510 seconds] - 2026-01-20T05:15:52.813Z
+
+Page reload sent to client(s).

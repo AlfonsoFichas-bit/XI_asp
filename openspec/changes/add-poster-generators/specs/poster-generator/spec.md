@@ -19,8 +19,8 @@ The system MUST use `public/base.webp` as the base image for the poster generati
 The system SHALL provide an interface for users to generate a personalized "Supporter Card" incorporating their name into an official design.
 
 #### Scenario: Name personalization
-- **WHEN** the user enters their name in the input field
-- **THEN** the name appears on the supporter card preview (e.g., "Carlos").
+- **WHEN** the user enters their name in the input field (e.g., "Carlos")
+- **THEN** the supporter card displays the name followed by the phrase "VOTA POR XAVIER" (e.g., "CARLOS VOTA POR XAVIER").
 
 #### Scenario: Default state
 - **WHEN** the user loads the generator

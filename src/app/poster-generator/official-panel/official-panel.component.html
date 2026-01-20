@@ -1,0 +1,109 @@
+<div class="bg-gray-100 dark:bg-gray-900 font-sans antialiased flex flex-col h-screen overflow-hidden transition-colors duration-300">
+
+  <!-- Header -->
+  <header class="bg-[#005C28] pt-12 pb-4 px-4 shadow-md flex justify-between items-center z-20">
+    <button class="text-white p-1 hover:bg-white/10 rounded-full transition-colors">
+      <span class="material-icons">arrow_back</span>
+    </button>
+    <div class="flex flex-col items-center">
+      <div class="flex items-center space-x-2">
+        <!-- Logo Icon -->
+        <svg class="w-8 h-8 text-white fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
+        </svg>
+        <div class="flex flex-col leading-none">
+          <span class="font-display text-white text-lg tracking-wide uppercase">Xavier</span>
+          <span class="text-xs text-white/90 italic">¡Con visión y coraje!</span>
+        </div>
+      </div>
+    </div>
+    <button class="text-white p-1 hover:bg-white/10 rounded-full transition-colors">
+      <span class="material-icons">share</span>
+    </button>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow flex items-center justify-center p-6 relative overflow-y-auto bg-gray-100 dark:bg-gray-800 transition-colors duration-300">
+
+    <!-- Poster Card -->
+    <div #posterCard class="relative w-full max-w-sm aspect-[3/4] bg-white dark:bg-gray-700 rounded-lg shadow-2xl transform transition-transform duration-300 hover:scale-[1.01] overflow-hidden">
+
+      <!-- Background Gradients -->
+      <div class="absolute inset-0 bg-gradient-to-br from-yellow-300 via-yellow-400 to-[#005C28] opacity-90"></div>
+      <div class="absolute top-0 right-0 w-full h-1/2 bg-[#005C28] rounded-bl-[100px] transform -translate-y-12 translate-x-12 opacity-80 mix-blend-multiply"></div>
+
+      <!-- Content -->
+      <div class="absolute inset-0 flex flex-col justify-between p-4 z-10">
+        <div class="flex justify-between items-start">
+          <div class="w-12 h-12 border-2 border-black rounded-full flex items-center justify-center">
+            <span class="material-icons text-3xl text-black">check</span>
+          </div>
+          <div class="text-right text-white">
+            <h3 class="font-display text-xl leading-none">Xavier<br/>Iturralde</h3>
+          </div>
+        </div>
+
+        <div class="mt-8">
+          <!-- Dynamic Text Here -->
+          <h1 class="font-display text-4xl text-black uppercase leading-none tracking-tighter mb-1">
+            {{ name() }} VOTA POR XAVIER
+          </h1>
+          <p class="font-display text-sm text-[#005C28] uppercase tracking-wide">Es momento de cambiar nuestra ciudad</p>
+        </div>
+
+        <!-- Candidate Image Container -->
+        <div class="absolute bottom-0 right-0 w-2/3 h-2/3 overflow-hidden">
+          <img alt="Candidato Xavier" class="object-cover w-full h-full object-top mask-image-gradient" src="/base.webp" />
+        </div>
+
+        <!-- Bottom Text -->
+        <div class="mt-auto relative z-20">
+          <h2 class="font-display text-2xl text-white drop-shadow-md uppercase leading-none mb-1">¡Rumbo a la<br/>Alcaldía!</h2>
+          <p class="text-xs text-white drop-shadow font-medium">Tú y yo transformaremos La Paz.</p>
+          <div class="mt-8 border-t border-white/50 pt-2">
+            <p class="font-display text-lg text-white text-right leading-none shadow-black drop-shadow-lg">
+              XAVIER ITURRALDE<br/>
+              <span class="text-yellow-300">ALCALDE 2026-2031</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Texture Overlay -->
+      <div class="absolute bottom-0 left-0 w-full h-32 bg-black opacity-10 mix-blend-overlay z-0"></div>
+    </div>
+  </main>
+
+  <!-- Bottom Sheet / Controls -->
+  <div class="bg-[#FADD00] dark:bg-yellow-600 rounded-t-[2rem] shadow-[0_-5px_20px_rgba(0,0,0,0.15)] z-30 flex flex-col transition-colors duration-300">
+    <div class="w-12 h-1.5 bg-black/10 rounded-full mx-auto mt-3 mb-4"></div>
+    <div class="px-8 pb-8 pt-2 flex flex-col h-full">
+      <div class="mb-6">
+        <label class="block text-[#111111] dark:text-black font-display text-xl uppercase tracking-wide mb-2" for="nameInput">
+          ¿Cómo te llamas?
+        </label>
+        <div class="relative">
+          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <span class="material-icons text-gray-400">person</span>
+          </div>
+          <input
+            class="block w-full pl-10 pr-3 py-4 text-lg font-bold text-gray-900 bg-white rounded-xl border-0 ring-1 ring-gray-200 focus:ring-4 focus:ring-[#005C28]/50 focus:border-[#005C28] placeholder-gray-400 shadow-sm transition-shadow duration-200"
+            id="nameInput"
+            placeholder="Escribe tu nombre aquí"
+            type="text"
+            [ngModel]="name()"
+            (input)="updateName($event)"
+          />
+        </div>
+        <p class="text-xs text-[#111111]/60 dark:text-black/60 mt-2 ml-1 font-medium">
+          Esto personalizará tu tarjeta digital de apoyo.
+        </p>
+      </div>
+
+      <button (click)="downloadCard()" class="w-full bg-[#111111] hover:bg-black text-white font-display text-xl tracking-wider py-5 rounded-xl shadow-lg transform active:scale-[0.98] transition-all flex justify-center items-center group mt-auto mb-4">
+        DESCARGAR TARJETA
+        <span class="material-icons ml-2 group-hover:translate-x-1 transition-transform">download</span>
+      </button>
+    </div>
+  </div>
+</div>

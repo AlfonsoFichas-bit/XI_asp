@@ -1,0 +1,95 @@
+<div class="min-h-screen flex flex-col font-sans antialiased bg-yellow-400 dark:bg-gray-900 transition-colors duration-300">
+  <header class="flex justify-between items-center p-6 relative z-10">
+    <button class="w-10 h-10 flex items-center justify-center rounded-full bg-black/10 dark:bg-white/10 text-black dark:text-white backdrop-blur-sm">
+      <span class="material-icons">arrow_back</span>
+    </button>
+    <div class="flex flex-col items-center">
+      <span class="font-display uppercase tracking-wider text-xl text-black dark:text-yellow-400">Xavier 2026</span>
+      <span class="text-xs uppercase font-bold tracking-widest opacity-60 text-black dark:text-gray-300">Editor Oficial</span>
+    </div>
+    <button class="w-10 h-10 flex items-center justify-center rounded-full bg-black/10 dark:bg-white/10 text-black dark:text-white backdrop-blur-sm">
+      <span class="material-icons">more_vert</span>
+    </button>
+  </header>
+
+  <main class="flex-1 flex flex-col items-center justify-start px-6 pb-8 pt-2">
+    <!-- Preview Card -->
+    <div #posterContainer class="w-full max-w-sm relative aspect-[4/5] rounded-xl overflow-hidden shadow-2xl ring-4 ring-black/5 dark:ring-white/10 transform transition-transform hover:scale-[1.02] duration-500 bg-white dark:bg-gray-800">
+
+      <!-- Base Image -->
+      <img alt="Candidato Xavier Iturralde" class="absolute inset-0 w-full h-full object-cover object-top opacity-90 mix-blend-multiply dark:mix-blend-normal dark:opacity-60" src="/base.webp" />
+
+      <!-- Gradient Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-yellow-400/90 dark:to-gray-900/90"></div>
+
+      <!-- Content Overlay -->
+      <div class="absolute inset-0 flex flex-col justify-between p-6">
+        <div class="self-end">
+          <div class="w-12 h-12 bg-black text-yellow-400 rounded-full flex items-center justify-center shadow-lg">
+            <span class="material-icons">verified</span>
+          </div>
+        </div>
+
+        <div class="mt-auto mb-16">
+          <h2 class="font-display text-5xl leading-none text-black dark:text-white uppercase drop-shadow-md tracking-tight break-words">
+            {{ message() }}
+          </h2>
+          <p class="font-bold text-sm bg-black text-white inline-block px-2 py-1 mt-2 uppercase tracking-wider">
+            Es momento de cambiar
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="w-full max-w-sm mt-8 space-y-8">
+      <div class="relative group">
+        <label class="block text-xs font-bold uppercase tracking-widest text-black/60 dark:text-white/60 mb-2" for="campaign-text">
+          Tu Mensaje de Campaña
+        </label>
+        <div class="relative">
+          <input
+            class="w-full bg-transparent border-0 border-b-4 border-black dark:border-white text-black dark:text-white font-display text-4xl placeholder-black/30 dark:placeholder-white/30 focus:ring-0 focus:border-black dark:focus:border-yellow-400 px-0 py-2 transition-colors duration-300 uppercase tracking-tight"
+            id="campaign-text"
+            placeholder="ESCRIBE AQUÍ..."
+            type="text"
+            [ngModel]="message()"
+            (input)="onInput($event)"
+          />
+          <span class="material-icons absolute right-0 top-1/2 -translate-y-1/2 text-black dark:text-white animate-pulse">
+            edit
+          </span>
+        </div>
+        <p class="mt-2 text-xs font-medium text-black/50 dark:text-white/40 text-right">
+          Caracteres: {{ characterCount() }}/{{ maxCharacters }}
+        </p>
+      </div>
+
+      <button (click)="saveImage()" class="w-full bg-black dark:bg-white text-white dark:text-black font-bold py-5 px-8 text-lg uppercase tracking-wider shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3">
+        <span>¡Listo! Guardar Imagen</span>
+        <span class="material-icons text-xl">save_alt</span>
+      </button>
+
+      <div class="flex justify-center gap-6 pt-2">
+        <button (click)="share()" class="flex flex-col items-center gap-1 text-black dark:text-white hover:opacity-70 transition-opacity">
+          <div class="w-10 h-10 border-2 border-black dark:border-white rounded-full flex items-center justify-center">
+            <span class="material-icons text-lg">share</span>
+          </div>
+          <span class="text-[10px] font-bold uppercase tracking-widest">Compartir</span>
+        </button>
+        <button (click)="reset()" class="flex flex-col items-center gap-1 text-black dark:text-white hover:opacity-70 transition-opacity">
+          <div class="w-10 h-10 border-2 border-black dark:border-white rounded-full flex items-center justify-center">
+            <span class="material-icons text-lg">refresh</span>
+          </div>
+          <span class="text-[10px] font-bold uppercase tracking-widest">Reiniciar</span>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="p-6 text-center">
+    <p class="text-[10px] uppercase font-bold tracking-[0.2em] text-black/40 dark:text-white/30">
+      Xavier Iturralde • Alcalde 2026-2031
+    </p>
+  </footer>
+</div>
